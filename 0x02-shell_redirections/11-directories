@@ -1,2 +1,3 @@
 #!/bin/bash
-ls -l | grep "^d" | grep -v "^d.*\..*" | grep -v "^d.*\..*" | wc -l
+find . -type d -not -path '*/\.*' -not -name '.' -print | wc -l
+
